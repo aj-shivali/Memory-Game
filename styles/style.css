@@ -1,0 +1,202 @@
+/* @import url("http://fonts.cdnfonts.com/css/harry-potter"); */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  /* color: white; */
+  font-family: "Harry Potter", sans-serif;
+  height: 100%;
+  background-color: cornsilk;
+  background-image: url(../image/wallhaven-zx8lry.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+img {
+  width: 5%;
+}
+
+.overlay-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 100;
+  font-size: 3.8rem;
+  color: white;
+}
+.overlay-text.visible {
+  display: flex;
+  animation: overlay-grow 500ms forwards;
+}
+
+.gameover-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: white;
+}
+.gameover-text.show {
+  display: flex;
+  flex-direction: column;
+  animation: gameover-grow 500ms forwards;
+}
+.text-small {
+  font-size: 3rem;
+}
+.hide {
+  display: none;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(22, 19, 19, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(67, 125, 165, 0.815);
+    font-size: 5em;
+  }
+}
+
+@keyframes gameover-grow {
+  from {
+    background-color: rgba(22, 19, 19, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(67, 125, 165, 0.815);
+    font-size: 7em;
+  }
+}
+
+.title {
+  font-weight: normal;
+  text-align: center;
+  font-size: 5em;
+  color: aliceblue;
+}
+.game-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+.game-info-container > .game-info {
+  font-size: 2em;
+}
+.game-info {
+  color: aliceblue;
+  font-size: 1em;
+  text-align: start;
+  padding: 0 5%;
+}
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 400px;
+}
+
+.game {
+  width: 50%;
+  height: 68vh;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(33% - 10px);
+  margin: auto;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+.card.flip {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  border-radius: 5px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+/* #game div {
+  border: 1px solid black;
+  width: 15%;
+  height: 200px;
+  margin: 10px;
+  display: inline-block;
+} */
+#victory-text > a {
+  height: 40%;
+  width: 20%;
+}
+button {
+  border-radius: 15px;
+  height: 20%;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .overlay-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .title {
+    font-size: 3em;
+  }
+  .gameover-text {
+    text-align: center;
+  }
+  .game {
+    width: 95%;
+    height: 65vh;
+  }
+  .card {
+    width: calc(25% - 10px);
+    height: calc(28% - 10px);
+    margin: auto;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+}

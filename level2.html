@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memory Game!</title>
+    <link rel="stylesheet" href="styles/level2.css" />
+  </head>
+  <body>
+    <h1 class="title">Memory Game!!</h1>
+    <div class="overlay-text visible">
+      Well, it may have escaped your notice Mr. Potter but, life isn't fair!
+    </div>
+    <div class="game-info-container">
+      <div class="game-info">Time : <span id="time-remaining">100</span></div>
+      <div class="game-info">Flips : <span id="flips">0</span></div>
+      <div class="game-info">Score : <span id="game-score">0</span></div>
+    </div>
+    <div id="game-over-text" class="gameover-text hide">
+      Avada Kedavra
+      <span class="text-small"><a href="level2.html">Click to Restart</a></span>
+    </div>
+    <div id="victory-text" class="gameover-text hide">
+      Expecto Petronus
+      <div class="game-info">
+        High Score Clicks : <span id="high-score">0</span>
+      </div>
+      <div class="game-info">
+        Your Score Clicks : <span id="victory-score">0</span>
+      </div>
+      <span class="text-small">You won!!</span>
+      <a href="level3.html">
+        <button>Next level</button>
+      </a>
+    </div>
+    <div class="game">
+      <div class="card" data-name="harry">
+        <img
+          class="card-front"
+          src="image/PNG/Harry_potter.jpg"
+          alt="Harry_potter"
+        />
+        <img
+          class="card-back"
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="dumbledore">
+        <img
+          class="card-front"
+          src="image/PNG/Albus_Dumbledore.jpg"
+          alt="Albus_Dumbledore"
+        />
+        <img
+          class="card-back"
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="dobby">
+        <img class="card-front" src="image/PNG/Dobby.jpg" alt="Dobby" />
+        <img
+          class="card-back"
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="harry">
+        <img
+          class="card-front"
+          src="image/PNG/Harry_potter.jpg"
+          alt="Harry_potter"
+        />
+        <img
+          class="card-back"
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="dobby">
+        <img class="card-front" src="image/PNG/Dobby.jpg" alt="Dobby" />
+        <img
+          class="card-back"
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="hedwig">
+        <img class="card-front" src="image/PNG/Hedwig.jpg" alt="Hedwig" />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="dumbledore">
+        <img
+          class="card-front"
+          src="image/PNG/Albus_Dumbledore.jpg"
+          alt="Albus_Dumbledore"
+        />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="hedwig">
+        <img class="card-front" src="image/PNG/Hedwig.jpg" alt="Hedwig" />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="hermione">
+        <img
+          class="card-front"
+          src="image/PNG/Hermione Granger.jpg"
+          alt="Hermione"
+        />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="hermione">
+        <img
+          class="card-front"
+          src="image/PNG/Hermione Granger.jpg"
+          alt="Hermione"
+        />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="snape">
+        <img
+          class="card-front"
+          src="image/PNG/Severus_Snape .jpg"
+          alt="snape"
+        />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="snape">
+        <img
+          class="card-front"
+          src="image/PNG/Severus_Snape .jpg"
+          alt="snape"
+        />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="moody">
+        <img class="card-front" src="image/PNG/Mad-Eye.jpg" alt="moody" />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="moody">
+        <img class="card-front" src="image/PNG/Mad-Eye.jpg" alt="moody" />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="neville">
+        <img class="card-front" src="image/PNG/Neville.jpg" alt="neville" />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+
+      <div class="card" data-name="neville">
+        <img class="card-front" src="image/PNG/Neville.jpg" alt="neville" />
+        <img
+          class="card-back"
+          <img
+          src="image/extra-large-wb-official-licensed-harry-potter-deathly-hallows-original-imaf9hr7eqvwxapm.jpeg"
+          alt="Deathly hollows"
+        />
+      </div>
+    </div>
+    <script src="scripts/level2.js"></script>
+  </body>
+</html>
